@@ -1,0 +1,22 @@
+.videoContainer {
+  width: 100%;
+
+  video {
+    width: 100%;
+    height: auto;
+    display: block; // Cambio recomendado
+  }
+
+  .playButton {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+}

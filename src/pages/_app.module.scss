@@ -1,0 +1,134 @@
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+
+  &.animatText {
+    animation: keepMiddle 3s ease-out forwards;
+  }
+
+  &.exitText {
+    animation: slideOut 1s ease-in forwards;
+  }
+
+  p {
+    color: #faf9f6;
+    font-size: 4vw;
+    margin: 0;
+    padding: 0;
+    font-family: "Galano bold";
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fadeInMoveUp 2s forwards;
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+@keyframes fadeInMoveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes keepMiddle {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+
+    &.animatText {
+      animation: keepMiddle 3s ease-out forwards;
+    }
+
+    &.exitText {
+      animation: slideOut 1s ease-in forwards;
+    }
+
+    .dreams {
+      font-size: 70px;
+    }
+
+    p {
+      color: #faf9f6;
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+      font-family: "Galano bold";
+      opacity: 0;
+      transform: translateY(100%);
+      animation: fadeInMoveUp 2s forwards;
+    }
+  }
+
+  @keyframes fadeInMoveUp {
+    0% {
+      opacity: 0;
+      transform: translateY(150%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes keepMiddle {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+}
